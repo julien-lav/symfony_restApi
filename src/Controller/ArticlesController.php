@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Annotation\Groups;
 
+
 class ArticlesController extends FOSRestController
 {
 
@@ -24,9 +25,9 @@ class ArticlesController extends FOSRestController
     }
 
     /**
-	* @Rest\View(serializerGroups={"articles"})
-	* @return \FOS\RestBundle\View\View
-	*/
+	 * @Rest\View(serializerGroups={"articles"})
+	 * @return \FOS\RestBundle\View\View
+	 */
     public function getArticlesAction()
     {
 		$articles = $this->articleRepository->findAll();
@@ -35,8 +36,8 @@ class ArticlesController extends FOSRestController
 	// "get_articles"            [GET] /articles
 
 	/**
-	* @Rest\View(serializerGroups={"article"})
-	*/
+	 * @Rest\View(serializerGroups={"article"})
+	 */
 	public function	getArticleAction($id)
 	{
 	   	$article = $this->articleRepository->find($id);
@@ -45,16 +46,25 @@ class ArticlesController extends FOSRestController
 	// "get_article"             [GET] /articles/{id}
 
 	/**
-	* @Rest\View(serializerGroups={"article"})
-	* @Rest\Post("/articles")
-	* @ParamConverter("article", converter="fos_rest.request_body")
-	*/
+	 * @Rest\View(serializerGroups={"articles"})
+	 * @Rest\Post("/articles")
+	 * @ParamConverter("article", converter="fos_rest.request_body")
+	 */
 	public function postArticlesAction(Article $article)
 	{
 	   	$this->em->persist($article);
 	   	$this->em->flush();
 	   	return $this->view($article);
 	}
-	// "post_users"           [POST] /articles
-
+	
+	/**
+	 * @Rest\View(serializerGroups={"article"})
+	 */
+    public function	deleteArtcticleAction($id)
+	{
+        $article = $this->articleRepository->find($id);   	
+           $this->em->remove($article);
+           $this->em->flush();
+	} 
+	
 }

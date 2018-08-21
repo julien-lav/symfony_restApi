@@ -23,12 +23,14 @@ class Article
     private $id;
 
     /**
+     * @Groups("user")
      * @Groups("articles")
      * @ORM\Column(type="string", length=100, nullable=true)
      */
     private $title;
 
     /**
+     * @Groups("user")
      * @Groups("articles")
      * @ORM\Column(type="string", length=255, nullable=true)
      */
@@ -36,11 +38,9 @@ class Article
 
     /**
      * @Groups("articles")
-     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="articles")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="articles", cascade={"all"}, fetch="EAGER")
      */
     private $user;
-
-    //cascade={"all"}, fetch="EAGER"
 
     public function getId(): ?int
     {

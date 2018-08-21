@@ -16,6 +16,7 @@ class User implements UserInterface
 {
     /**
      * @Groups("user")
+     * @Groups("articles")
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -23,6 +24,7 @@ class User implements UserInterface
     private $id;
 
     /**
+     * @Groups("user")
      * @Groups("articles")
      * @ORM\Column(type="string", length=255)
      */
@@ -56,13 +58,11 @@ class User implements UserInterface
     /**
      * @Groups("user")
      * @Groups("article")
-     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="user", cascade={"persist"})
      */
     private $articles;
 
-    //cascade={"persist"}
-
-    public function __construct()
+    public function __construct()   
     {
         $this->roles = array('ROLE_USER');
         $this->apiKey = uniqid('', true);

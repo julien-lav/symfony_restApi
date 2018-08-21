@@ -62,15 +62,46 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         switch ($pathinfo) {
+            case '/api/users':
+                // app_users_getusers
+                $ret = array('_route' => 'app_users_getusers', '_controller' => 'App\\Controller\\UsersController::getUsersAction');
+                if (!isset(($a = array('GET' => 0))[$canonicalMethod])) {
+                    $allow += $a;
+                    goto not_app_users_getusers;
+                }
+
+                return $ret;
+                not_app_users_getusers:
+                // app_users_postusers
+                $ret = array('_route' => 'app_users_postusers', '_controller' => 'App\\Controller\\UsersController::postUsersAction');
+                if (!isset(($a = array('POST' => 0))[$requestMethod])) {
+                    $allow += $a;
+                    goto not_app_users_postusers;
+                }
+
+                return $ret;
+                not_app_users_postusers:
+                // app_users_putuser
+                $ret = array('_route' => 'app_users_putuser', '_controller' => 'App\\Controller\\UsersController::putUserAction');
+                if (!isset(($a = array('PUT' => 0))[$requestMethod])) {
+                    $allow += $a;
+                    goto not_app_users_putuser;
+                }
+
+                return $ret;
+                not_app_users_putuser:
+                break;
             default:
                 $routes = array(
                     '/articles' => array(array('_route' => 'app_articles_postarticles', '_controller' => 'App\\Controller\\ArticlesController::postArticlesAction'), null, array('POST' => 0), null),
-                    '/users' => array(array('_route' => 'app_users_postusers', '_controller' => 'App\\Controller\\UsersController::postUsersAction'), null, array('POST' => 0), null),
+                    '/users' => array(array('_route' => 'app_users_postusers_1', '_controller' => 'App\\Controller\\UsersController::postUsersAction'), null, array('POST' => 0), null),
+                    '/api/doc.json' => array(array('_route' => 'app.swagger', '_controller' => 'nelmio_api_doc.controller.swagger'), null, array('GET' => 0), null),
                     '/_profiler/' => array(array('_route' => '_profiler_home', '_controller' => 'web_profiler.controller.profiler::homeAction'), null, null, null),
                     '/_profiler/search' => array(array('_route' => '_profiler_search', '_controller' => 'web_profiler.controller.profiler::searchAction'), null, null, null),
                     '/_profiler/search_bar' => array(array('_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'), null, null, null),
                     '/_profiler/phpinfo' => array(array('_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'), null, null, null),
                     '/_profiler/open' => array(array('_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'), null, null, null),
+                    '/api/doc' => array(array('_route' => 'app.swagger_ui', '_controller' => 'nelmio_api_doc.controller.swagger_ui'), null, array('GET' => 0), null),
                 );
 
                 if (!isset($routes[$pathinfo])) {
@@ -96,33 +127,41 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         $matchedPathinfo = $pathinfo;
         $regexList = array(
             0 => '{^(?'
+                    .'|/api/(?'
+                        .'|users/([^/]++)(?'
+                            .'|(*:32)'
+                        .')'
+                        .'|art(?'
+                            .'|icles(?'
+                                .'|(?:\\.(json|xml|html))?(*:76)'
+                                .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:116)'
+                                .'|(?:\\.(json|xml|html))?(*:146)'
+                            .')'
+                            .'|cticles/([^/\\.]++)(?:\\.(json|xml|html))?(*:195)'
+                        .')'
+                    .')'
                     .'|/_(?'
-                        .'|error/(\\d+)(?:\\.([^/]++))?(*:38)'
-                        .'|wdt/([^/]++)(*:57)'
+                        .'|error/(\\d+)(?:\\.([^/]++))?(*:236)'
+                        .'|wdt/([^/]++)(*:256)'
                         .'|profiler/([^/]++)(?'
                             .'|/(?'
-                                .'|search/results(*:102)'
-                                .'|router(*:116)'
+                                .'|search/results(*:302)'
+                                .'|router(*:316)'
                                 .'|exception(?'
-                                    .'|(*:136)'
-                                    .'|\\.css(*:149)'
+                                    .'|(*:336)'
+                                    .'|\\.css(*:349)'
                                 .')'
                             .')'
-                            .'|(*:159)'
+                            .'|(*:359)'
                         .')'
                     .')'
                     .'|/users(?'
-                        .'|(?:\\.(json|xml|html))?(*:200)'
-                        .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:241)'
-                        .'|(?:\\.(json|xml|html))?(*:271)'
+                        .'|(?:\\.(json|xml|html))?(*:400)'
+                        .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:441)'
+                        .'|(?:\\.(json|xml|html))?(*:471)'
                         .'|/([^/\\.]++)(?:\\.(json|xml|html))?(?'
-                            .'|(*:315)'
+                            .'|(*:515)'
                         .')'
-                    .')'
-                    .'|/articles(?'
-                        .'|(?:\\.(json|xml|html))?(*:359)'
-                        .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:400)'
-                        .'|(?:\\.(json|xml|html))?(*:430)'
                     .')'
                 .')$}sD',
         );
@@ -130,7 +169,31 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         foreach ($regexList as $offset => $regex) {
             while (preg_match($regex, $matchedPathinfo, $matches)) {
                 switch ($m = (int) $matches['MARK']) {
-                    case 315:
+                    case 32:
+                        $matches = array('id' => $matches[1] ?? null);
+
+                        // app_users_getuser
+                        $ret = $this->mergeDefaults(array('_route' => 'app_users_getuser') + $matches, array('_controller' => 'App\\Controller\\UsersController::getUserAction'));
+                        if (!isset(($a = array('GET' => 0))[$canonicalMethod])) {
+                            $allow += $a;
+                            goto not_app_users_getuser;
+                        }
+
+                        return $ret;
+                        not_app_users_getuser:
+
+                        // app_users_deleteuser
+                        $ret = $this->mergeDefaults(array('_route' => 'app_users_deleteuser') + $matches, array('_controller' => 'App\\Controller\\UsersController::deleteUserAction'));
+                        if (!isset(($a = array('DELETE' => 0))[$requestMethod])) {
+                            $allow += $a;
+                            goto not_app_users_deleteuser;
+                        }
+
+                        return $ret;
+                        not_app_users_deleteuser:
+
+                        break;
+                    case 515:
                         $matches = array('id' => $matches[1] ?? null, '_format' => $matches[2] ?? null);
 
                         // put_user
@@ -156,19 +219,20 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         break;
                     default:
                         $routes = array(
-                            38 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
-                            57 => array(array('_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'), array('token'), null, null),
-                            102 => array(array('_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'), array('token'), null, null),
-                            116 => array(array('_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'), array('token'), null, null),
-                            136 => array(array('_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'), array('token'), null, null),
-                            149 => array(array('_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'), array('token'), null, null),
-                            159 => array(array('_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'), array('token'), null, null),
-                            200 => array(array('_route' => 'get_users', '_controller' => 'App\\Controller\\UsersController:getUsersAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
-                            241 => array(array('_route' => 'get_user', '_controller' => 'App\\Controller\\UsersController:getUserAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
-                            271 => array(array('_route' => 'post_users', '_controller' => 'App\\Controller\\UsersController:postUsersAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
-                            359 => array(array('_route' => 'get_articles', '_controller' => 'App\\Controller\\ArticlesController:getArticlesAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
-                            400 => array(array('_route' => 'get_article', '_controller' => 'App\\Controller\\ArticlesController:getArticleAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
-                            430 => array(array('_route' => 'post_articles', '_controller' => 'App\\Controller\\ArticlesController:postArticlesAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
+                            76 => array(array('_route' => 'get_articles', '_controller' => 'App\\Controller\\ArticlesController:getArticlesAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
+                            116 => array(array('_route' => 'get_article', '_controller' => 'App\\Controller\\ArticlesController:getArticleAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
+                            146 => array(array('_route' => 'post_articles', '_controller' => 'App\\Controller\\ArticlesController:postArticlesAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
+                            195 => array(array('_route' => 'delete_artcticle', '_controller' => 'App\\Controller\\ArticlesController:deleteArtcticleAction', '_format' => 'json'), array('id', '_format'), array('DELETE' => 0), null),
+                            236 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
+                            256 => array(array('_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'), array('token'), null, null),
+                            302 => array(array('_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'), array('token'), null, null),
+                            316 => array(array('_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'), array('token'), null, null),
+                            336 => array(array('_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'), array('token'), null, null),
+                            349 => array(array('_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'), array('token'), null, null),
+                            359 => array(array('_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'), array('token'), null, null),
+                            400 => array(array('_route' => 'get_users', '_controller' => 'App\\Controller\\UsersController:getUsersAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
+                            441 => array(array('_route' => 'get_user', '_controller' => 'App\\Controller\\UsersController:getUserAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
+                            471 => array(array('_route' => 'post_users', '_controller' => 'App\\Controller\\UsersController:postUsersAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
                         );
 
                         list($ret, $vars, $requiredMethods, $requiredSchemes) = $routes[$m];
@@ -194,7 +258,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $ret;
                 }
 
-                if (430 === $m) {
+                if (515 === $m) {
                     break;
                 }
                 $regex = substr_replace($regex, 'F', $m - $offset, 1 + strlen($m));

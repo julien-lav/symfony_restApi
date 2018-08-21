@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Entity\User;
@@ -10,8 +11,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Annotation\Groups;
-
-
+use Symfony\Component\Routing\Annotation\Route;
 
 class UsersController extends FOSRestController
 {
@@ -25,9 +25,10 @@ class UsersController extends FOSRestController
     }
 	
 	/**
-	* @Rest\View(serializerGroups={"user"})
-	* @return \FOS\RestBundle\View\View
-	*/
+	 * @Route("/api/users", methods={"GET"})
+	 * @Rest\View(serializerGroups={"user"})
+	 * @return \FOS\RestBundle\View\View
+	 */
 	public function getUsersAction()
     {
 		$users = $this->userRepository->findAll();
@@ -36,6 +37,7 @@ class UsersController extends FOSRestController
 	// "get_users"            [GET] /users
 	
 	/**
+	 * @Route("/api/users/{id}", methods={"GET"})
 	 * @Rest\View(serializerGroups={"user"})
 	 */
 	public function	getUserAction($id)
@@ -46,10 +48,11 @@ class UsersController extends FOSRestController
 	// "get_user"             [GET] /users/{id}
 	
 	/**
-	* @Rest\Post("/users")
-	* @Rest\View(serializerGroups={"user"})
-	* @ParamConverter("user", converter="fos_rest.request_body")
-	*/
+	 * @Route("/api/users", methods={"POST"})
+	 * @Rest\Post("/users")
+	 * @Rest\View(serializerGroups={"user"})
+	 * @ParamConverter("user", converter="fos_rest.request_body")
+	 */
 	public function	postUsersAction(User $user)
 	{   	
 	   	$this->em->persist($user);
@@ -59,6 +62,7 @@ class UsersController extends FOSRestController
 	// "post_users"           [POST] /users
 
 	/**
+	 * @Route("/api/users", methods={"PUT"})
 	 * @Rest\View(serializerGroups={"user"})
 	 */
     public function	putUserAction(Request $request, int $id)
@@ -93,6 +97,7 @@ class UsersController extends FOSRestController
 	// "put_user"             [PUT] /users/{id}
 
 	/**
+	 * @Route("/api/users/{id}", methods={"DELETE"})
 	 * @Rest\View(serializerGroups={"user"})
 	 */
     public function	deleteUserAction($id)
