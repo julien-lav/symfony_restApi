@@ -1,5 +1,9 @@
+Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for ".instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\ArticlesController" (parent: .abstract.instanceof.App\Controller\ArticlesController).
+Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "App\Controller\ArticlesController" (parent: .instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\ArticlesController).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for ".instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\UsersController" (parent: .abstract.instanceof.App\Controller\UsersController).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "App\Controller\UsersController" (parent: .instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\UsersController).
+Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for ".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ArticleRepository" (parent: .abstract.instanceof.App\Repository\ArticleRepository).
+Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "App\Repository\ArticleRepository" (parent: .instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ArticleRepository).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for ".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" (parent: .abstract.instanceof.App\Repository\UserRepository).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "App\Repository\UserRepository" (parent: .instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "cache.app" (parent: cache.adapter.filesystem).
@@ -149,6 +153,37 @@ Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "fos_rest.inflector"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "Twig_Environment"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "Twig\Environment"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.file_parser"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.property_accessor"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.object_generator"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.caller"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.hydrator"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.hydrator.property"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.resolver.fixture_bag"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.resolver.fixture_set"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.resolver.value"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.resolver.value.property_accessor"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.resolver.parameter_bag"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.generator.instantiator"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.parameter_bag"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.expression_language.lexer"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture_bag"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.specs"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.constructor"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.arguments"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.property"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.fixture_builder.denormalizer.flag_parser"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "nelmio_alice.file_locator"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "fidry_alice_data_fixtures.doctrine.loader"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "fidry_alice_data_fixtures.persistence.purger.doctrine.orm_purger"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "argument_resolver.controller_locator"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "fos_rest.serializer"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service "twig.loader.filesystem"; reason: private alias.
@@ -207,10 +242,25 @@ Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPas
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "web_profiler.debug_toolbar" previously pointing to "router.default" to "router".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "twig.extension.trans" previously pointing to "translator.data_collector" to "translator".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "twig.extension.routing" previously pointing to "router.default" to "router".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "nelmio_alice.generator.resolver.value.chainable.faker_value_resolver" previously pointing to "nelmio_alice.faker.generator" to "Faker\Generator".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fidry_alice_data_fixtures.loader.multipass_file" previously pointing to "nelmio_alice.file_loader.simple" to "nelmio_alice.file_loader".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fidry_alice_data_fixtures.loader.simple" previously pointing to "nelmio_alice.files_loader.simple" to "nelmio_alice.files_loader".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fidry_alice_data_fixtures.doctrine.persister_loader" previously pointing to "fidry_alice_data_fixtures.persistence.persister.doctrine.object_manager_persister" to "fidry_alice_data_fixtures.persistence.persister.doctrine".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "hautelook_alice.console.command.doctrine.doctrine_orm_load_data_fixtures_command" previously pointing to "hautelook_alice.loader.doctrine_orm_loader" to "hautelook_alice.loader".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "hautelook_alice.data_fixtures.loader.file_resolver_loader" previously pointing to "fidry_alice_data_fixtures.doctrine.purger_loader" to "fidry_alice_data_fixtures.loader.doctrine".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "hautelook_alice.data_fixtures.loader.file_resolver_loader" previously pointing to "hautelook_alice.resolver.file.kernel_file_resolver" to "hautelook_alice.resolver.file".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "hautelook_alice.data_fixtures.purge_loader" previously pointing to "fidry_alice_data_fixtures.doctrine.purger_loader" to "fidry_alice_data_fixtures.loader.doctrine".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "hautelook_alice.data_fixtures.purge_loader" previously pointing to "hautelook_alice.resolver.file.kernel_file_resolver" to "hautelook_alice.resolver.file".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "hautelook_alice.data_fixtures.append_loader" previously pointing to "hautelook_alice.resolver.file.kernel_file_resolver" to "hautelook_alice.resolver.file".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service ".service_locator.0igcDxJ" previously pointing to "fos_rest.view_handler.default" to "fos_rest.view_handler".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service ".service_locator.3nNxzEJ" previously pointing to "translator.data_collector" to "translator".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service ".service_locator.tdKlFgs" previously pointing to "router.default" to "router".
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fos_rest.view_handler" previously pointing to "router.default" to "router".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "nelmio_alice.file_loader" previously pointing to "nelmio_alice.data_loader.simple" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "nelmio_alice.files_loader" previously pointing to "nelmio_alice.data_loader.simple" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "fidry_alice_data_fixtures.loader.doctrine" previously pointing to "fidry_alice_data_fixtures.persistence.doctrine.purger.purger_factory" to "fidry_alice_data_fixtures.persistence.purger_factory.doctrine".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "hautelook_alice.loader" previously pointing to "hautelook_alice.resolver.bundle.no_bundle_resolver" to "hautelook_alice.resolver.bundle".
+Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "hautelook_alice.loader" previously pointing to "hautelook_alice.locator.environmentless" to "hautelook_alice.locator".
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "cache.adapter.system"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "cache.adapter.apcu"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "cache.adapter.doctrine"; reason: abstract.
@@ -287,8 +337,12 @@ Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Re
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "monolog.activation_strategy.not_found"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "monolog.handler.fingers_crossed.error_level_activation_strategy"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service "maker.auto_command.abstract"; reason: abstract.
+Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\ArticlesController"; reason: abstract.
+Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".abstract.instanceof.App\Controller\ArticlesController"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\UsersController"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".abstract.instanceof.App\Controller\UsersController"; reason: abstract.
+Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ArticleRepository"; reason: abstract.
+Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".abstract.instanceof.App\Repository\ArticleRepository"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".abstract.instanceof.App\Repository\UserRepository"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "debug.controller_resolver" to "http_kernel".
@@ -376,7 +430,6 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "serializer.encoder.json" to "serializer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "serializer.encoder.yaml" to "serializer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "serializer.encoder.csv" to "serializer".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "property_accessor" to "serializer.normalizer.object".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "serializer.mapping.class_discriminator_resolver" to "serializer.normalizer.object".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "serializer.mapping.chain_loader" to "serializer.mapping.class_metadata_factory".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "monolog.logger.doctrine" to "doctrine.dbal.logger".
@@ -386,7 +439,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.dbal.default_connection.configuration" to "doctrine.dbal.default_connection".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.dbal.default_connection.event_manager" to "doctrine.dbal.default_connection".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.dbal.connection_factory" to "doctrine.dbal.default_connection".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator..C_1HIE" to "doctrine.orm.container_repository_factory".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.UNKueZr" to "doctrine.orm.container_repository_factory".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.default_metadata_driver" to "doctrine.orm.default_configuration".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.naming_strategy.underscore" to "doctrine.orm.default_configuration".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "doctrine.orm.quote_strategy.default" to "doctrine.orm.default_configuration".
@@ -422,7 +475,6 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "sensio_framework_extra.converter.doctrine.orm" to "sensio_framework_extra.converter.manager".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "framework_extra_bundle.date_time_param_converter" to "sensio_framework_extra.converter.manager".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "sensio_framework_extra.view.guesser" to "sensio_framework_extra.view.listener".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "monolog.logger" to "sensio_framework_extra.security.listener".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "maker.autoloader_util" to "maker.file_manager".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "maker.autoloader_finder" to "maker.autoloader_util".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "maker.event_registry" to "maker.maker.make_subscriber".
@@ -451,6 +503,115 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "twig.template_iterator" to "twig.template_cache_warmer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "fragment.handler" to "twig.runtime.httpkernel".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.xEWwCJt" to "twig.runtime_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.file_parser.registry" to "nelmio_alice.file_parser.runtime_cache".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.file_parser.default_include_processor" to "nelmio_alice.file_parser.runtime_cache".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.file_parser.chainable.yaml" to "nelmio_alice.file_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.file_parser.chainable.php" to "nelmio_alice.file_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.file_parser.chainable.json" to "nelmio_alice.file_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.file_parser.symfony_yaml" to "nelmio_alice.file_parser.chainable.yaml".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.fixture_set.remove_conflicting_objects" to "nelmio_alice.generator.double_pass".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.object_generator.complete" to "nelmio_alice.generator.double_pass".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.object_generator.simple" to "nelmio_alice.generator.object_generator.complete".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.instantiator.existing_instance" to "nelmio_alice.generator.object_generator.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.hydrator.simple" to "nelmio_alice.generator.object_generator.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.caller.simple" to "nelmio_alice.generator.object_generator.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.caller.registry" to "nelmio_alice.generator.caller.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.caller.chainable.configurator_method_call" to "nelmio_alice.generator.caller.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.caller.chainable.method_call_with_reference" to "nelmio_alice.generator.caller.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.caller.chainable.optional_method_call" to "nelmio_alice.generator.caller.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.caller.chainable.simple_call" to "nelmio_alice.generator.caller.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.hydrator.property.symfony_property_access" to "nelmio_alice.generator.hydrator.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.fixture_set.simple" to "nelmio_alice.generator.resolver.fixture_set.remove_conflicting_objects".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.parameter_bag.remove_conflicting_parameters" to "nelmio_alice.generator.resolver.fixture_set.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.fixture_bag.template_bag" to "nelmio_alice.generator.resolver.fixture_set.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.array_value_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.dynamic_array_value_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.evaluated_value_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.function_argument_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.fixture_property_reference_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.fixture_method_call_reference_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.unresolved_fixture_reference_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.fixture_wildcard_reference_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.list_value_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.optional_value_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.parameter_value_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.unique_value_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.value_for_current_value_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.variable_value_resolver" to "nelmio_alice.generator.resolver.value.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.faker_value_resolver" to "nelmio_alice.generator.resolver.value.chainable.php_value_resolver".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.php_value_resolver" to "nelmio_alice.generator.resolver.value.chainable.function_argument_resolver".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.fixture_reference_resolver" to "nelmio_alice.generator.resolver.value.chainable.self_fixture_reference_resolver".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.chainable.self_fixture_reference_resolver" to "nelmio_alice.generator.resolver.value.chainable.unresolved_fixture_reference_resolver".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.unique_values_pool" to "nelmio_alice.generator.resolver.value.chainable.unique_value_resolver".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.parameter_bag.simple" to "nelmio_alice.generator.resolver.parameter_bag.remove_conflicting_parameters".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.parameter.registry" to "nelmio_alice.generator.resolver.parameter_bag.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.parameter.chainable.static_parameter_resolver" to "nelmio_alice.generator.resolver.parameter.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.parameter.chainable.array_parameter_resolver" to "nelmio_alice.generator.resolver.parameter.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.parameter.chainable.recursive_parameter_resolver" to "nelmio_alice.generator.resolver.parameter.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.parameter.chainable.string_parameter_resolver" to "nelmio_alice.generator.resolver.parameter.chainable.recursive_parameter_resolver".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.instantiator.resolver" to "nelmio_alice.generator.instantiator.existing_instance".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.instantiator.registry" to "nelmio_alice.generator.instantiator.resolver".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.instantiator.chainable.no_caller_method_instantiator" to "nelmio_alice.generator.instantiator.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.instantiator.chainable.null_constructor_instantiator" to "nelmio_alice.generator.instantiator.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.instantiator.chainable.no_method_call_instantiator" to "nelmio_alice.generator.instantiator.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.instantiator.chainable.static_factory_instantiator" to "nelmio_alice.generator.instantiator.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "hautelook_alice.alice.generator.instantiator.chainable.instantiated_reference_instantiator" to "nelmio_alice.generator.instantiator.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.simple" to "nelmio_alice.fixture_builder.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.parameter.simple_parameter_bag_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.simple_fixture_bag_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.string_parser" to "nelmio_alice.fixture_builder.expression_language.parser.function_fixture_reference_parser".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.simple_parser" to "nelmio_alice.fixture_builder.expression_language.parser.string_parser".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.lexer.empty_value_lexer" to "nelmio_alice.fixture_builder.expression_language.parser.simple_parser".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry" to "nelmio_alice.fixture_builder.expression_language.parser.simple_parser".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.dynamic_array_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.escaped_value_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.fixture_list_reference_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.fixture_method_reference_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.fixture_range_reference_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.method_reference_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.optional_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.parameter_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.property_reference_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.variable_reference_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.simple_reference_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.string_array_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.string_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.tolerant_function_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.variable_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.wildcard_reference_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.identity_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.tolerant_function_token_parser".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.function_token_parser" to "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.identity_token_parser".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.lexer.reference_escaper_lexer" to "nelmio_alice.fixture_builder.expression_language.lexer.empty_value_lexer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.lexer.globals_patterns_lexer" to "nelmio_alice.fixture_builder.expression_language.lexer.reference_escaper_lexer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.lexer.function_lexer" to "nelmio_alice.fixture_builder.expression_language.lexer.globals_patterns_lexer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.lexer.string_then_reference_lexer" to "nelmio_alice.fixture_builder.expression_language.lexer.function_lexer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.lexer.sub_patterns_lexer" to "nelmio_alice.fixture_builder.expression_language.lexer.string_then_reference_lexer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.lexer.reference_lexer" to "nelmio_alice.fixture_builder.expression_language.lexer.sub_patterns_lexer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.registry_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.fixture.simple_fixture_bag_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.simple_list" to "nelmio_alice.fixture_builder.denormalizer.fixture.registry_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.reference_range_name" to "nelmio_alice.fixture_builder.denormalizer.fixture.registry_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.simple_range" to "nelmio_alice.fixture_builder.denormalizer.fixture.registry_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.simple" to "nelmio_alice.fixture_builder.denormalizer.fixture.registry_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.null_list" to "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.temporary_list".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.temporary_list" to "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.simple_list".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.null_range" to "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.temporary_range".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.temporary_range" to "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.simple_range".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.constructor.legacy_constructor_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.specs.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.property.simple_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.specs.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.constructor.constructor_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.fixture.specs.constructor.legacy_constructor_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.constructor.factory_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.fixture.specs.constructor.legacy_constructor_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value.simple_value_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value.unique_value_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.function_fixture_reference_parser" to "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value.simple_value_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.function_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.simple_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.method_flag_handler.configurator_flag_handler" to "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.simple_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.method_flag_handler.optional_flag_handler" to "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.simple_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.flag_parser.registry" to "nelmio_alice.fixture_builder.denormalizer.flag_parser.element".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.configurator" to "nelmio_alice.fixture_builder.denormalizer.flag_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.extend" to "nelmio_alice.fixture_builder.denormalizer.flag_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.optional" to "nelmio_alice.fixture_builder.denormalizer.flag_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.template" to "nelmio_alice.fixture_builder.denormalizer.flag_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.unique" to "nelmio_alice.fixture_builder.denormalizer.flag_parser.registry".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.file_locator.default" to "hautelook_alice.alice.file_locator.kernel".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "maker.maker.make_authenticator" to "maker.auto_command.make_auth".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "maker.maker.make_command" to "maker.auto_command.make_command".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "maker.maker.make_controller" to "maker.auto_command.make_controller".
@@ -474,7 +635,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "debug.argument_resolver.default.inner" to "debug.argument_resolver.default".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "debug.argument_resolver.variadic.inner" to "debug.argument_resolver.variadic".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "monolog.handler.null_internal" to "monolog.logger.event".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.ZWqubTe" to "debug.argument_resolver.service.inner".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.iSjUwrx" to "debug.argument_resolver.service.inner".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.3nNxzEJ" to ".service_locator.3nNxzEJ.translation.warmer".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.oNnsU_h" to ".service_locator.oNnsU_h.router.default".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.tdKlFgs" to ".service_locator.tdKlFgs.router.cache_warmer".
@@ -483,6 +644,11 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.oNnsU_h.router.default" to "router".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "parameter_bag" to "router".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "monolog.logger.router" to "router".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.simple" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.double_pass" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.faker.provider.alice" to "Faker\Generator".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "hautelook_alice.resolver.bundle.simple_resolver" to "hautelook_alice.resolver.bundle".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "hautelook_alice.locator.env_directory" to "hautelook_alice.locator".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "debug.validator.inner" to "validator".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "debug.event_dispatcher.inner" to "event_dispatcher".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "monolog.logger.event" to "event_dispatcher".
@@ -550,7 +716,6 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service ".1_ArrayCache~7WPT3rJ"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "annotations.dummy_registry"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "annotations.filesystem_cache"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "property_accessor"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "serializer.mapping.class_discriminator_resolver"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "serializer.normalizer.constraint_violation_list"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "serializer.normalizer.dateinterval"; reason: unused.
@@ -615,7 +780,6 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "security.logout.success_handler.main"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "security.exception_listener.main"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service ".service_locator.ko2dQVn"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.logger"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.formatter.chrome_php"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.formatter.gelf_message"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.formatter.html"; reason: unused.
@@ -687,10 +851,127 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "twig.translation.extractor"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "twig.configurator.environment"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "twig.runtime_loader"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service ".service_locator.ZWqubTe"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.file_parser.symfony_yaml"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.file_parser.default_include_processor"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.file_parser.registry"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.file_parser.chainable.yaml"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.file_parser.chainable.php"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.file_parser.chainable.json"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.double_pass"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.object_generator.complete"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.object_generator.simple"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.caller.simple"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.caller.registry"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.caller.chainable.configurator_method_call"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.caller.chainable.method_call_with_reference"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.caller.chainable.optional_method_call"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.caller.chainable.simple_call"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.hydrator.simple"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.hydrator.property.symfony_property_access"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.fixture_bag.template_bag"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.fixture_set.remove_conflicting_objects"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.fixture_set.simple"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.unique_values_pool"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.array_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.dynamic_array_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.evaluated_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.faker_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.php_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.function_argument_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.fixture_property_reference_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.fixture_method_call_reference_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.fixture_reference_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.self_fixture_reference_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.unresolved_fixture_reference_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.fixture_wildcard_reference_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.list_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.optional_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.parameter_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.unique_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.value_for_current_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.chainable.variable_value_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.parameter_bag.remove_conflicting_parameters"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.parameter_bag.simple"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.parameter.registry"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.parameter.chainable.static_parameter_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.parameter.chainable.array_parameter_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.parameter.chainable.recursive_parameter_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.parameter.chainable.string_parameter_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.instantiator.existing_instance"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.instantiator.resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.instantiator.registry"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.instantiator.chainable.no_caller_method_instantiator"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.instantiator.chainable.null_constructor_instantiator"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.instantiator.chainable.no_method_call_instantiator"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.instantiator.chainable.static_factory_instantiator"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.simple"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.simple"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.parameter.simple_parameter_bag_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.function_fixture_reference_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.string_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.simple_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.registry"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.dynamic_array_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.escaped_value_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.fixture_list_reference_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.fixture_method_reference_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.fixture_range_reference_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.method_reference_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.optional_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.parameter_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.property_reference_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.variable_reference_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.simple_reference_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.string_array_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.string_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.tolerant_function_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.identity_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.function_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.variable_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.wildcard_reference_token_parser"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.lexer.empty_value_lexer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.lexer.reference_escaper_lexer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.lexer.globals_patterns_lexer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.lexer.function_lexer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.lexer.string_then_reference_lexer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.lexer.sub_patterns_lexer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.lexer.reference_lexer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.simple_fixture_bag_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.registry_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.null_list"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.temporary_list"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.simple_list"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.null_range"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.reference_range_name"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.temporary_range"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.simple_range"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.chainable.simple"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.constructor.legacy_constructor_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.constructor.factory_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.constructor.constructor_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value.simple_value_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.property.simple_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.function_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.method_flag_handler.configurator_flag_handler"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.method_flag_handler.optional_flag_handler"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.flag_parser.registry"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.configurator"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.extend"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.optional"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.template"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.flag_parser.chainable.unique"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.file_locator.default"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.faker.provider.alice"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fidry_alice_data_fixtures.loader.multipass_file"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fidry_alice_data_fixtures.persistence.purger_mode"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "hautelook_alice.alice.generator.instantiator.chainable.instantiated_reference_instantiator"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "hautelook_alice.resolver.bundle.simple_resolver"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "hautelook_alice.data_fixtures.loader.file_resolver_loader"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "hautelook_alice.locator.env_directory"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service ".service_locator.iSjUwrx"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service ".service_locator.yQVjGlt"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service ".service_locator.gmwRZ3h"; reason: unused.
-Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service ".service_locator..C_1HIE"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service ".service_locator.UNKueZr"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "security.logout.handler.csrf_token_clearing"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.logger.console"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.logger.translation"; reason: unused.
@@ -754,6 +1035,18 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.http_utils" to "security.firewall.map.context.main".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.http_utils" to "security.firewall.map.context.main".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "security.http_utils" to "security.firewall.map.context.main".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "hautelook_alice.alice.file_locator.kernel" to "nelmio_alice.file_parser.runtime_cache".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "hautelook_alice.alice.file_locator.kernel" to "nelmio_alice.file_parser.runtime_cache".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.simple_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.specs.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.simple_denormalizer" to "nelmio_alice.fixture_builder.denormalizer.specs.simple".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.argument_escaper" to "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value.unique_value_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.argument_escaper" to "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value.unique_value_denormalizer".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.flag_parser.element" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.specs.simple" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.specs.simple" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.flag_parser.element" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.registry" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.generator.resolver.value.registry" to "nelmio_alice.data_loader".
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "file_locator"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "session.storage.metadata_bag"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "routing.loader.annotation"; reason: unused.
@@ -761,4 +1054,19 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "security.http_utils"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "security.user.provider.concrete.your_db_provider"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "fos_rest.routing.loader.processor"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.generator.resolver.value.registry"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.expression_language.parser.token_parser.chainable.argument_escaper"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.specs.simple"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.calls.simple_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.flag_parser.element"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "hautelook_alice.alice.file_locator.kernel"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "monolog.logger.profiler"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.arguments.simple_arguments_denormalizer" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.arguments.simple_arguments_denormalizer" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.property_accessor.std" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.property_accessor.std" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.property_accessor.std"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.arguments.simple_arguments_denormalizer"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value.unique_value_denormalizer" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value.unique_value_denormalizer" to "nelmio_alice.data_loader".
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "nelmio_alice.fixture_builder.denormalizer.fixture.specs.value.unique_value_denormalizer"; reason: unused.

@@ -10,6 +10,8 @@ class ComposerStaticInit455583d0795171b0e631b0d9fe144e2a
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '3722f872abd441c379baeab7b88038ba' => __DIR__ . '/..' . '/nelmio/alice/src/deep_clone.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -80,14 +82,21 @@ class ComposerStaticInit455583d0795171b0e631b0d9fe144e2a
         ),
         'N' => 
         array (
+            'Nelmio\\Alice\\' => 13,
             'Negotiation\\' => 12,
         ),
         'M' => 
         array (
             'Monolog\\' => 8,
         ),
+        'H' => 
+        array (
+            'Hautelook\\AliceBundle\\' => 22,
+        ),
         'F' => 
         array (
+            'Fidry\\AliceDataFixtures\\' => 24,
+            'Faker\\' => 6,
             'FOS\\RestBundle\\' => 15,
         ),
         'D' => 
@@ -97,12 +106,14 @@ class ComposerStaticInit455583d0795171b0e631b0d9fe144e2a
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\DBAL\\Migrations\\' => 25,
             'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\DataFixtures\\' => 29,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
             'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
+            'DeepCopy\\' => 9,
         ),
         'A' => 
         array (
@@ -302,6 +313,10 @@ class ComposerStaticInit455583d0795171b0e631b0d9fe144e2a
         array (
             0 => __DIR__ . '/..' . '/ocramius/package-versions/src/PackageVersions',
         ),
+        'Nelmio\\Alice\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nelmio/alice/src',
+        ),
         'Negotiation\\' => 
         array (
             0 => __DIR__ . '/..' . '/willdurand/negotiation/src/Negotiation',
@@ -309,6 +324,18 @@ class ComposerStaticInit455583d0795171b0e631b0d9fe144e2a
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Hautelook\\AliceBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hautelook/alice-bundle/src',
+        ),
+        'Fidry\\AliceDataFixtures\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/theofidry/alice-data-fixtures/src',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'FOS\\RestBundle\\' => 
         array (
@@ -333,6 +360,10 @@ class ComposerStaticInit455583d0795171b0e631b0d9fe144e2a
         'Doctrine\\Common\\Inflector\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+        'Doctrine\\Common\\DataFixtures\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
@@ -360,6 +391,10 @@ class ComposerStaticInit455583d0795171b0e631b0d9fe144e2a
         'Doctrine\\Bundle\\DoctrineBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
+        ),
+        'DeepCopy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
         'App\\Tests\\' => 
         array (

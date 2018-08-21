@@ -8,6 +8,9 @@ use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Annotation\Groups;
+
 
 
 class UsersController extends FOSRestController
@@ -21,6 +24,10 @@ class UsersController extends FOSRestController
 		$this->em = $em;
     }
 	
+	/**
+	* @Rest\View(serializerGroups={"user"})
+	* @return \FOS\RestBundle\View\View
+	*/
 	public function getUsersAction()
     {
 		$users = $this->userRepository->findAll();
@@ -28,6 +35,9 @@ class UsersController extends FOSRestController
 	}
 	// "get_users"            [GET] /users
 	
+	/**
+	 * @Rest\View(serializerGroups={"user"})
+	 */
 	public function	getUserAction($id)
 	{
 	   	$user = $this->userRepository->find($id);
@@ -37,19 +47,20 @@ class UsersController extends FOSRestController
 	
 	/**
 	* @Rest\Post("/users")
+	* @Rest\View(serializerGroups={"user"})
 	* @ParamConverter("user", converter="fos_rest.request_body")
 	*/
 	public function	postUsersAction(User $user)
-	   {
-
-	   	
+	{   	
 	   	$this->em->persist($user);
 	   	$this->em->flush();
 	   	return $this->view($user);
-	   }
+	}
 	// "post_users"           [POST] /users
 
-
+	/**
+	 * @Rest\View(serializerGroups={"user"})
+	 */
     public function	putUserAction(Request $request, int $id)
 	   {
            $user = $this->userRepository->find($id);
@@ -81,12 +92,16 @@ class UsersController extends FOSRestController
 	   } 
 	// "put_user"             [PUT] /users/{id}
 
+	/**
+	 * @Rest\View(serializerGroups={"user"})
+	 */
     public function	deleteUserAction($id)
-	   {
-           $user = $this->userRepository->find($id);
+	{
+        $user = $this->userRepository->find($id);
+	   	if ($this->getUser() === $user){
            $this->em->remove($user);
            $this->em->flush();
-
-	   } 
+       }
+	} 
 	// "delete_user"          [DELETE] /users/{id}
 }

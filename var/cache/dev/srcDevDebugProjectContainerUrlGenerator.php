@@ -20,6 +20,7 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         $this->defaultLocale = $defaultLocale;
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
+        'app_articles_postarticles' => array(array(), array('_controller' => 'App\\Controller\\ArticlesController::postArticlesAction'), array(), array(array('text', '/articles')), array(), array()),
         'app_users_postusers' => array(array(), array('_controller' => 'App\\Controller\\UsersController::postUsersAction'), array(), array(array('text', '/users')), array(), array()),
         '_twig_error_test' => array(array('code', '_format'), array('_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code' => '\\d+'), array(array('variable', '.', '[^/]++', '_format'), array('variable', '/', '\\d+', 'code'), array('text', '/_error')), array(), array()),
         '_wdt' => array(array('token'), array('_controller' => 'web_profiler.controller.profiler::toolbarAction'), array(), array(array('variable', '/', '[^/]++', 'token'), array('text', '/_wdt')), array(), array()),
@@ -38,6 +39,9 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         'post_users' => array(array('_format'), array('_controller' => 'App\\Controller\\UsersController:postUsersAction', '_format' => 'json'), array('_format' => 'json|xml|html'), array(array('variable', '.', 'json|xml|html', '_format'), array('text', '/users')), array(), array()),
         'put_user' => array(array('id', '_format'), array('_controller' => 'App\\Controller\\UsersController:putUserAction', '_format' => 'json'), array('_format' => 'json|xml|html'), array(array('variable', '.', 'json|xml|html', '_format'), array('variable', '/', '[^/\\.]++', 'id'), array('text', '/users')), array(), array()),
         'delete_user' => array(array('id', '_format'), array('_controller' => 'App\\Controller\\UsersController:deleteUserAction', '_format' => 'json'), array('_format' => 'json|xml|html'), array(array('variable', '.', 'json|xml|html', '_format'), array('variable', '/', '[^/\\.]++', 'id'), array('text', '/users')), array(), array()),
+        'get_articles' => array(array('_format'), array('_controller' => 'App\\Controller\\ArticlesController:getArticlesAction', '_format' => 'json'), array('_format' => 'json|xml|html'), array(array('variable', '.', 'json|xml|html', '_format'), array('text', '/articles')), array(), array()),
+        'get_article' => array(array('id', '_format'), array('_controller' => 'App\\Controller\\ArticlesController:getArticleAction', '_format' => 'json'), array('_format' => 'json|xml|html'), array(array('variable', '.', 'json|xml|html', '_format'), array('variable', '/', '[^/\\.]++', 'id'), array('text', '/articles')), array(), array()),
+        'post_articles' => array(array('_format'), array('_controller' => 'App\\Controller\\ArticlesController:postArticlesAction', '_format' => 'json'), array('_format' => 'json|xml|html'), array(array('variable', '.', 'json|xml|html', '_format'), array('text', '/articles')), array(), array()),
     );
         }
     }

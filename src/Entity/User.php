@@ -2,8 +2,12 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Groups;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -11,6 +15,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class User implements UserInterface
 {
     /**
+     * @Groups("user")
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -18,6 +23,7 @@ class User implements UserInterface
     private $id;
 
     /**
+     * @Groups("articles")
      * @ORM\Column(type="string", length=255)
      */
     private $firstname;
@@ -47,10 +53,20 @@ class User implements UserInterface
      */
     private $apiKey;
 
+    /**
+     * @Groups("user")
+     * @Groups("article")
+     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="user")
+     */
+    private $articles;
+
+    //cascade={"persist"}
+
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
         $this->apiKey = uniqid('', true);
+        $this->articles = new ArrayCollection();
     }
 
 
@@ -149,5 +165,36 @@ class User implements UserInterface
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
+    }
+
+    /**
+     * @return Collection|Article[]
+     */
+    public function getArticles(): Collection
+    {
+        return $this->articles;
+    }
+
+    public function addArticle(Article $article): self
+    {
+        if (!$this->articles->contains($article)) {
+            $this->articles[] = $article;
+            $article->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArticle(Article $article): self
+    {
+        if ($this->articles->contains($article)) {
+            $this->articles->removeElement($article);
+            // set the owning side to null (unless already changed)
+            if ($article->getUser() === $this) {
+                $article->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }

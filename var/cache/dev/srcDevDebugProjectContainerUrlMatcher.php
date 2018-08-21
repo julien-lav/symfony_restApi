@@ -64,6 +64,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         switch ($pathinfo) {
             default:
                 $routes = array(
+                    '/articles' => array(array('_route' => 'app_articles_postarticles', '_controller' => 'App\\Controller\\ArticlesController::postArticlesAction'), null, array('POST' => 0), null),
                     '/users' => array(array('_route' => 'app_users_postusers', '_controller' => 'App\\Controller\\UsersController::postUsersAction'), null, array('POST' => 0), null),
                     '/_profiler/' => array(array('_route' => '_profiler_home', '_controller' => 'web_profiler.controller.profiler::homeAction'), null, null, null),
                     '/_profiler/search' => array(array('_route' => '_profiler_search', '_controller' => 'web_profiler.controller.profiler::searchAction'), null, null, null),
@@ -118,6 +119,11 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                             .'|(*:315)'
                         .')'
                     .')'
+                    .'|/articles(?'
+                        .'|(?:\\.(json|xml|html))?(*:359)'
+                        .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:400)'
+                        .'|(?:\\.(json|xml|html))?(*:430)'
+                    .')'
                 .')$}sD',
         );
 
@@ -160,6 +166,9 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                             200 => array(array('_route' => 'get_users', '_controller' => 'App\\Controller\\UsersController:getUsersAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
                             241 => array(array('_route' => 'get_user', '_controller' => 'App\\Controller\\UsersController:getUserAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
                             271 => array(array('_route' => 'post_users', '_controller' => 'App\\Controller\\UsersController:postUsersAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
+                            359 => array(array('_route' => 'get_articles', '_controller' => 'App\\Controller\\ArticlesController:getArticlesAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
+                            400 => array(array('_route' => 'get_article', '_controller' => 'App\\Controller\\ArticlesController:getArticleAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
+                            430 => array(array('_route' => 'post_articles', '_controller' => 'App\\Controller\\ArticlesController:postArticlesAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
                         );
 
                         list($ret, $vars, $requiredMethods, $requiredSchemes) = $routes[$m];
@@ -185,7 +194,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $ret;
                 }
 
-                if (315 === $m) {
+                if (430 === $m) {
                     break;
                 }
                 $regex = substr_replace($regex, 'F', $m - $offset, 1 + strlen($m));
