@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\ConstraintViolationListInterface;
 
 class UsersController extends FOSRestController
 {
@@ -46,18 +47,36 @@ class UsersController extends FOSRestController
 		return $this->view($user);
 	} 
 	// "get_user"             [GET] /users/{id}
-	
-	/**
-	 * @Route("/api/users", methods={"POST"})
-	 * @Rest\Post("/users")
-	 * @Rest\View(serializerGroups={"user"})
-	 * @ParamConverter("user", converter="fos_rest.request_body")
-	 */
-	public function	postUsersAction(User $user)
-	{   	
-	   	$this->em->persist($user);
-	   	$this->em->flush();
-	   	return $this->view($user);
+
+    /**
+     * @Route("/api/users", methods={"POST"})
+     * @Rest\Post("/users")
+     * @Rest\View(serializerGroups={"user"})
+     * @ParamConverter("user", converter="fos_rest.request_body")
+     * @param User $user
+     * @param ConstraintViolationListInterface $validationErrors
+     * @return \FOS\RestBundle\View\View
+     */
+	public function	postUsersAction(User $user,  ConstraintViolationListInterface $validationErrors)
+    {
+        if($validationErrors->count() > 0) {
+            /** @var ConstraintViolation $constraintViolation */
+            foreach ($validationErrors as $constraintViolation) {
+                $message = $constraintViolation->getMessage();
+                // Returns the violation message. (Ex. This value should not be blank.)
+                $propertyPath = $constraintViolation->getPropertyPath();
+                // Returns the property path from the root element to the violation. (Ex. lastname)
+                // Handle validation errors
+
+                // faire un tableau
+            }
+            // return error
+
+        }
+        $this->em->persist($user);
+        $this->em->flush();
+
+        return $this->view($user);
 	}
 	// "post_users"           [POST] /users
 

@@ -7,6 +7,8 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\ArticleInterface;
 use Symfony\Component\Serializer\Annotation\Groups;
+use Gedmo\Mapping\Annotation as Gedmo;
+
 
 // ???? this use are not surely usefull
 
@@ -18,20 +20,21 @@ class Article
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
+     * @Groups("article")
      * @ORM\Column(type="integer")
      */
     private $id;
 
     /**
      * @Groups("user")
-     * @Groups("articles")
+     * @Groups("article")
      * @ORM\Column(type="string", length=100, nullable=true)
      */
     private $title;
 
     /**
      * @Groups("user")
-     * @Groups("articles")
+     * @Groups("article")
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $content;
@@ -41,6 +44,15 @@ class Article
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="articles", cascade={"all"}, fetch="EAGER")
      */
     private $user;
+
+    /*
+     //* @var \DateTime $created
+     //*
+     //* @Gedmo\Timestampable(on="create")
+     //* @ORM\Column(type="datetime", nullable=true)
+     */
+    //private $created;
+
 
     public function getId(): ?int
     {

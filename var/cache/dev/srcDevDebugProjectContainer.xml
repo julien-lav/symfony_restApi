@@ -3341,7 +3341,7 @@
       <argument type="service" id="fos_rest.serializer.symfony"/>
       <argument type="collection"/>
       <argument></argument>
-      <argument>null</argument>
+      <argument type="service" id="debug.validator" on-invalid="ignore"/>
       <argument>validationErrors</argument>
     </service>
     <service id="fos_rest.view_response_listener" class="FOS\RestBundle\EventListener\ViewResponseListener">
@@ -4645,22 +4645,23 @@
         <argument key="viewhandler" type="service" id="fos_rest.view_handler.default"/>
       </argument>
     </service>
-    <service id=".service_locator.iuuVGtK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.RWA3FG5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="user" type="service" id=".errored..service_locator.iuuVGtK.App\Entity\User"/>
+        <argument key="user" type="service" id=".errored..service_locator.RWA3FG5.App\Entity\User"/>
+        <argument key="validationErrors" type="service" id=".errored..service_locator.RWA3FG5.Symfony\Component\Validator\ConstraintViolationListInterface"/>
       </argument>
     </service>
-    <service id=".service_locator.iSjUwrx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.V5c5vyN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ArticlesController::postArticlesAction" type="service" id=".service_locator.zv3hrPg"/>
         <argument key="App\Controller\ArticlesController::setViewHandler" type="service" id=".service_locator.0igcDxJ"/>
-        <argument key="App\Controller\UsersController::postUsersAction" type="service" id=".service_locator.iuuVGtK"/>
+        <argument key="App\Controller\UsersController::postUsersAction" type="service" id=".service_locator.RWA3FG5"/>
         <argument key="App\Controller\UsersController::setViewHandler" type="service" id=".service_locator.0igcDxJ"/>
         <argument key="App\Controller\ArticlesController:postArticlesAction" type="service" id=".service_locator.zv3hrPg"/>
         <argument key="App\Controller\ArticlesController:setViewHandler" type="service" id=".service_locator.0igcDxJ"/>
-        <argument key="App\Controller\UsersController:postUsersAction" type="service" id=".service_locator.iuuVGtK"/>
+        <argument key="App\Controller\UsersController:postUsersAction" type="service" id=".service_locator.RWA3FG5"/>
         <argument key="App\Controller\UsersController:setViewHandler" type="service" id=".service_locator.0igcDxJ"/>
       </argument>
     </service>
@@ -4880,7 +4881,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.iSjUwrx"/>
+      <argument type="service" id=".service_locator.V5c5vyN"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -4934,7 +4935,8 @@
       <factory service=".service_locator.UEpceA5" method="withContext"/>
     </service>
     <service id=".errored..service_locator.zv3hrPg.App\Entity\Article" class="App\Entity\Article"/>
-    <service id=".errored..service_locator.iuuVGtK.App\Entity\User" class="App\Entity\User"/>
+    <service id=".errored..service_locator.RWA3FG5.App\Entity\User" class="App\Entity\User"/>
+    <service id=".errored..service_locator.RWA3FG5.Symfony\Component\Validator\ConstraintViolationListInterface" class="Symfony\Component\Validator\ConstraintViolationListInterface"/>
     <service id=".service_locator.HKoUR8q" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5220,6 +5222,7 @@
     <service id="fos_rest.router" alias="router.default"/>
     <service id="fos_rest.view_handler" alias="fos_rest.view_handler.default" public="true"/>
     <service id="fos_rest.inflector" alias="fos_rest.inflector.doctrine"/>
+    <service id="fos_rest.validator" alias="debug.validator"/>
     <service id="Twig_Environment" alias="twig" public="false"/>
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="nelmio_alice.file_parser" alias="nelmio_alice.file_parser.runtime_cache"/>
@@ -5265,7 +5268,7 @@
     <service id="hautelook_alice.loader" alias="hautelook_alice.loader.doctrine_orm_loader" public="true"/>
     <service id="hautelook_alice.locator" alias="hautelook_alice.locator.environmentless" public="true"/>
     <service id="nelmio_api_doc.generator" alias="nelmio_api_doc.generator.default" public="true"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.iSjUwrx"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.V5c5vyN"/>
     <service id="fos_rest.serializer" alias="fos_rest.serializer.symfony"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
