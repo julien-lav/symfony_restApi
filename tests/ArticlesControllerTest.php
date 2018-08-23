@@ -18,7 +18,7 @@ class ArticlesControllerTest extends WebTestCase
 		$this->assertJson($content);
 
 		$arrayContent = json_decode($content, true);
-		$this->assertCount(7, $arrayContent);
+		$this->assertCount(10, $arrayContent);
 	}
 
     public function testGetArticle()
