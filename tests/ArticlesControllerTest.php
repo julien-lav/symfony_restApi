@@ -31,7 +31,7 @@ class ArticlesControllerTest extends WebTestCase
         $response = $clients->getResponse();
         $content = $response->getContent();
 
-        $this->assertEquals(204, $response->getStatusCode());
+        $this->assertEquals(200, $response->getStatusCode());
 
         $this->assertJson($content);
         $arrayContent = json_decode($content, true);
