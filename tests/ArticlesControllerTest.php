@@ -39,7 +39,7 @@ class ArticlesControllerTest extends WebTestCase
         // Tester les clefs
     }
 
-
+    /*
     public function testDeleteArticle()
     {
         $client = static::createClient();
@@ -71,6 +71,6 @@ class ArticlesControllerTest extends WebTestCase
         $this->assertJson($content);
 
         $arrayContent = json_decode($content, true);
-        $this->assertCount(10, $arrayContent);*/
-    }
+        $this->assertCount(10, $arrayContent);
+    }*/
 }
