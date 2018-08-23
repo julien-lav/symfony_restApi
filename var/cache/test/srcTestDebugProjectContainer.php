@@ -16,6 +16,6 @@ if (!\class_exists(srcTestDebugProjectContainer::class, false)) {
 
 return new \ContainerWTMGkQw\srcTestDebugProjectContainer(array(
     'container.build_hash' => 'WTMGkQw',
-    'container.build_id' => '404ed5b6',
-    'container.build_time' => 1534942509,
+    'container.build_id' => 'd1e910e6',
+    'container.build_time' => 1535015580,
 ), __DIR__.\DIRECTORY_SEPARATOR.'ContainerWTMGkQw');

@@ -128,39 +128,40 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         $regexList = array(
             0 => '{^(?'
                     .'|/api/(?'
-                        .'|users/([^/]++)(?'
-                            .'|(*:32)'
-                        .')'
                         .'|art(?'
                             .'|icles(?'
-                                .'|(?:\\.(json|xml|html))?(*:76)'
-                                .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:116)'
-                                .'|(?:\\.(json|xml|html))?(*:146)'
+                                .'|/([^/]++)(*:38)'
+                                .'|(?:\\.(json|xml|html))?(*:67)'
+                                .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:107)'
+                                .'|(?:\\.(json|xml|html))?(*:137)'
                             .')'
-                            .'|cticles/([^/\\.]++)(?:\\.(json|xml|html))?(*:195)'
+                            .'|cticles/([^/\\.]++)(?:\\.(json|xml|html))?(*:186)'
+                        .')'
+                        .'|users/([^/]++)(?'
+                            .'|(*:212)'
                         .')'
                     .')'
                     .'|/_(?'
-                        .'|error/(\\d+)(?:\\.([^/]++))?(*:236)'
-                        .'|wdt/([^/]++)(*:256)'
+                        .'|error/(\\d+)(?:\\.([^/]++))?(*:253)'
+                        .'|wdt/([^/]++)(*:273)'
                         .'|profiler/([^/]++)(?'
                             .'|/(?'
-                                .'|search/results(*:302)'
-                                .'|router(*:316)'
+                                .'|search/results(*:319)'
+                                .'|router(*:333)'
                                 .'|exception(?'
-                                    .'|(*:336)'
-                                    .'|\\.css(*:349)'
+                                    .'|(*:353)'
+                                    .'|\\.css(*:366)'
                                 .')'
                             .')'
-                            .'|(*:359)'
+                            .'|(*:376)'
                         .')'
                     .')'
                     .'|/users(?'
-                        .'|(?:\\.(json|xml|html))?(*:400)'
-                        .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:441)'
-                        .'|(?:\\.(json|xml|html))?(*:471)'
+                        .'|(?:\\.(json|xml|html))?(*:417)'
+                        .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:458)'
+                        .'|(?:\\.(json|xml|html))?(*:488)'
                         .'|/([^/\\.]++)(?:\\.(json|xml|html))?(?'
-                            .'|(*:515)'
+                            .'|(*:532)'
                         .')'
                     .')'
                 .')$}sD',
@@ -169,7 +170,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         foreach ($regexList as $offset => $regex) {
             while (preg_match($regex, $matchedPathinfo, $matches)) {
                 switch ($m = (int) $matches['MARK']) {
-                    case 32:
+                    case 212:
                         $matches = array('id' => $matches[1] ?? null);
 
                         // app_users_getuser
@@ -193,7 +194,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         not_app_users_deleteuser:
 
                         break;
-                    case 515:
+                    case 532:
                         $matches = array('id' => $matches[1] ?? null, '_format' => $matches[2] ?? null);
 
                         // put_user
@@ -219,20 +220,21 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         break;
                     default:
                         $routes = array(
-                            76 => array(array('_route' => 'get_articles', '_controller' => 'App\\Controller\\ArticlesController:getArticlesAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
-                            116 => array(array('_route' => 'get_article', '_controller' => 'App\\Controller\\ArticlesController:getArticleAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
-                            146 => array(array('_route' => 'post_articles', '_controller' => 'App\\Controller\\ArticlesController:postArticlesAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
-                            195 => array(array('_route' => 'delete_artcticle', '_controller' => 'App\\Controller\\ArticlesController:deleteArtcticleAction', '_format' => 'json'), array('id', '_format'), array('DELETE' => 0), null),
-                            236 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
-                            256 => array(array('_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'), array('token'), null, null),
-                            302 => array(array('_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'), array('token'), null, null),
-                            316 => array(array('_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'), array('token'), null, null),
-                            336 => array(array('_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'), array('token'), null, null),
-                            349 => array(array('_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'), array('token'), null, null),
-                            359 => array(array('_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'), array('token'), null, null),
-                            400 => array(array('_route' => 'get_users', '_controller' => 'App\\Controller\\UsersController:getUsersAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
-                            441 => array(array('_route' => 'get_user', '_controller' => 'App\\Controller\\UsersController:getUserAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
-                            471 => array(array('_route' => 'post_users', '_controller' => 'App\\Controller\\UsersController:postUsersAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
+                            38 => array(array('_route' => 'app_articles_deleteartcticle', '_controller' => 'App\\Controller\\ArticlesController::deleteArtcticleAction'), array('id'), array('DELETE' => 0), null),
+                            67 => array(array('_route' => 'get_articles', '_controller' => 'App\\Controller\\ArticlesController:getArticlesAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
+                            107 => array(array('_route' => 'get_article', '_controller' => 'App\\Controller\\ArticlesController:getArticleAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
+                            137 => array(array('_route' => 'post_articles', '_controller' => 'App\\Controller\\ArticlesController:postArticlesAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
+                            186 => array(array('_route' => 'delete_artcticle', '_controller' => 'App\\Controller\\ArticlesController:deleteArtcticleAction', '_format' => 'json'), array('id', '_format'), array('DELETE' => 0), null),
+                            253 => array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null),
+                            273 => array(array('_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'), array('token'), null, null),
+                            319 => array(array('_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'), array('token'), null, null),
+                            333 => array(array('_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'), array('token'), null, null),
+                            353 => array(array('_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'), array('token'), null, null),
+                            366 => array(array('_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'), array('token'), null, null),
+                            376 => array(array('_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'), array('token'), null, null),
+                            417 => array(array('_route' => 'get_users', '_controller' => 'App\\Controller\\UsersController:getUsersAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
+                            458 => array(array('_route' => 'get_user', '_controller' => 'App\\Controller\\UsersController:getUserAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
+                            488 => array(array('_route' => 'post_users', '_controller' => 'App\\Controller\\UsersController:postUsersAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
                         );
 
                         list($ret, $vars, $requiredMethods, $requiredSchemes) = $routes[$m];
@@ -258,7 +260,7 @@ class srcDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                         return $ret;
                 }
 
-                if (515 === $m) {
+                if (532 === $m) {
                     break;
                 }
                 $regex = substr_replace($regex, 'F', $m - $offset, 1 + strlen($m));

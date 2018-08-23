@@ -21,6 +21,7 @@ class srcDevDebugProjectContainerUrlGenerator extends Symfony\Component\Routing\
         if (null === self::$declaredRoutes) {
             self::$declaredRoutes = array(
         'app_articles_postarticles' => array(array(), array('_controller' => 'App\\Controller\\ArticlesController::postArticlesAction'), array(), array(array('text', '/articles')), array(), array()),
+        'app_articles_deleteartcticle' => array(array('id'), array('_controller' => 'App\\Controller\\ArticlesController::deleteArtcticleAction'), array(), array(array('variable', '/', '[^/]++', 'id'), array('text', '/api/articles')), array(), array()),
         'app_users_getusers' => array(array(), array('_controller' => 'App\\Controller\\UsersController::getUsersAction'), array(), array(array('text', '/api/users')), array(), array()),
         'app_users_getuser' => array(array('id'), array('_controller' => 'App\\Controller\\UsersController::getUserAction'), array(), array(array('variable', '/', '[^/]++', 'id'), array('text', '/api/users')), array(), array()),
         'app_users_postusers' => array(array(), array('_controller' => 'App\\Controller\\UsersController::postUsersAction'), array(), array(array('text', '/api/users')), array(), array()),

@@ -18,6 +18,6 @@ class UsersControllerTest extends WebTestCase
         $this->assertJson($content);
 
         $arrayContent = json_decode($content, true);
-        $this->assertCount(16, $arrayContent);
+        $this->assertCount(10, $arrayContent);
     }
 }

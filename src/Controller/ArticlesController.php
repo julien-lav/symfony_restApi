@@ -8,6 +8,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Annotation\Groups;
@@ -36,7 +37,7 @@ class ArticlesController extends FOSRestController
 	// "get_articles"            [GET] /articles
 
 	/**
-	 * @Rest\View(serializerGroups={"article"})
+	 * @Rest\View(serializerGroups={"articles"})
 	 */
 	public function	getArticleAction($id)
 	{
@@ -56,15 +57,25 @@ class ArticlesController extends FOSRestController
 	   	$this->em->flush();
 	   	return $this->view($article);
 	}
-	
+
 	/**
-	 * @Rest\View(serializerGroups={"article"})
+     * @Route("/api/articles/{id}", methods={"DELETE"})
+	 * @Rest\View(serializerGroups={"articles"})
 	 */
     public function	deleteArtcticleAction($id)
 	{
-        $article = $this->articleRepository->find($id);   	
-           $this->em->remove($article);
-           $this->em->flush();
+        $article = $this->articleRepository->find($id);
+
+        if($this->getUser() ===  $article->getUser())
+        {
+            $article->setUser(null);
+            $this->em->remove($article);
+            $this->em->flush();
+             return $this->view($articles);
+        }
+        else {
+            return $this->view("FORBIDDEN");
+        }
 	} 
 	
 }

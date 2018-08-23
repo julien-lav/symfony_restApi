@@ -20,21 +20,21 @@ class Article
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @Groups("article")
+     * @Groups("articles")
      * @ORM\Column(type="integer")
      */
     private $id;
 
     /**
      * @Groups("user")
-     * @Groups("article")
+     * @Groups("articles")
      * @ORM\Column(type="string", length=100, nullable=true)
      */
     private $title;
 
     /**
      * @Groups("user")
-     * @Groups("article")
+     * @Groups("articles")
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $content;

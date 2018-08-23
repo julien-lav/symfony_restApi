@@ -123,24 +123,25 @@ class srcTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
         $regexList = array(
             0 => '{^(?'
                     .'|/api/(?'
-                        .'|users/([^/]++)(?'
-                            .'|(*:32)'
-                        .')'
                         .'|art(?'
                             .'|icles(?'
-                                .'|(?:\\.(json|xml|html))?(*:76)'
-                                .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:116)'
-                                .'|(?:\\.(json|xml|html))?(*:146)'
+                                .'|/([^/]++)(*:38)'
+                                .'|(?:\\.(json|xml|html))?(*:67)'
+                                .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:107)'
+                                .'|(?:\\.(json|xml|html))?(*:137)'
                             .')'
-                            .'|cticles/([^/\\.]++)(?:\\.(json|xml|html))?(*:195)'
+                            .'|cticles/([^/\\.]++)(?:\\.(json|xml|html))?(*:186)'
+                        .')'
+                        .'|users/([^/]++)(?'
+                            .'|(*:212)'
                         .')'
                     .')'
                     .'|/users(?'
-                        .'|(?:\\.(json|xml|html))?(*:236)'
-                        .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:277)'
-                        .'|(?:\\.(json|xml|html))?(*:307)'
+                        .'|(?:\\.(json|xml|html))?(*:253)'
+                        .'|/([^/\\.]++)(?:\\.(json|xml|html))?(*:294)'
+                        .'|(?:\\.(json|xml|html))?(*:324)'
                         .'|/([^/\\.]++)(?:\\.(json|xml|html))?(?'
-                            .'|(*:351)'
+                            .'|(*:368)'
                         .')'
                     .')'
                 .')$}sD',
@@ -149,7 +150,7 @@ class srcTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
         foreach ($regexList as $offset => $regex) {
             while (preg_match($regex, $matchedPathinfo, $matches)) {
                 switch ($m = (int) $matches['MARK']) {
-                    case 32:
+                    case 212:
                         $matches = array('id' => $matches[1] ?? null);
 
                         // app_users_getuser
@@ -173,7 +174,7 @@ class srcTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
                         not_app_users_deleteuser:
 
                         break;
-                    case 351:
+                    case 368:
                         $matches = array('id' => $matches[1] ?? null, '_format' => $matches[2] ?? null);
 
                         // put_user
@@ -199,13 +200,14 @@ class srcTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
                         break;
                     default:
                         $routes = array(
-                            76 => array(array('_route' => 'get_articles', '_controller' => 'App\\Controller\\ArticlesController:getArticlesAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
-                            116 => array(array('_route' => 'get_article', '_controller' => 'App\\Controller\\ArticlesController:getArticleAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
-                            146 => array(array('_route' => 'post_articles', '_controller' => 'App\\Controller\\ArticlesController:postArticlesAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
-                            195 => array(array('_route' => 'delete_artcticle', '_controller' => 'App\\Controller\\ArticlesController:deleteArtcticleAction', '_format' => 'json'), array('id', '_format'), array('DELETE' => 0), null),
-                            236 => array(array('_route' => 'get_users', '_controller' => 'App\\Controller\\UsersController:getUsersAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
-                            277 => array(array('_route' => 'get_user', '_controller' => 'App\\Controller\\UsersController:getUserAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
-                            307 => array(array('_route' => 'post_users', '_controller' => 'App\\Controller\\UsersController:postUsersAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
+                            38 => array(array('_route' => 'app_articles_deleteartcticle', '_controller' => 'App\\Controller\\ArticlesController::deleteArtcticleAction'), array('id'), array('DELETE' => 0), null),
+                            67 => array(array('_route' => 'get_articles', '_controller' => 'App\\Controller\\ArticlesController:getArticlesAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
+                            107 => array(array('_route' => 'get_article', '_controller' => 'App\\Controller\\ArticlesController:getArticleAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
+                            137 => array(array('_route' => 'post_articles', '_controller' => 'App\\Controller\\ArticlesController:postArticlesAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
+                            186 => array(array('_route' => 'delete_artcticle', '_controller' => 'App\\Controller\\ArticlesController:deleteArtcticleAction', '_format' => 'json'), array('id', '_format'), array('DELETE' => 0), null),
+                            253 => array(array('_route' => 'get_users', '_controller' => 'App\\Controller\\UsersController:getUsersAction', '_format' => 'json'), array('_format'), array('GET' => 0), null),
+                            294 => array(array('_route' => 'get_user', '_controller' => 'App\\Controller\\UsersController:getUserAction', '_format' => 'json'), array('id', '_format'), array('GET' => 0), null),
+                            324 => array(array('_route' => 'post_users', '_controller' => 'App\\Controller\\UsersController:postUsersAction', '_format' => 'json'), array('_format'), array('POST' => 0), null),
                         );
 
                         list($ret, $vars, $requiredMethods, $requiredSchemes) = $routes[$m];
@@ -231,7 +233,7 @@ class srcTestDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBun
                         return $ret;
                 }
 
-                if (351 === $m) {
+                if (368 === $m) {
                     break;
                 }
                 $regex = substr_replace($regex, 'F', $m - $offset, 1 + strlen($m));
