@@ -26,12 +26,12 @@ class ArticlesControllerTest extends WebTestCase
         $clients = static::createClient();
 
 
-        $clients->request('GET', '/api/articles/1');
+        $clients->request('GET', '/api/articles/14');
 
         $response = $clients->getResponse();
         $content = $response->getContent();
 
-        $this->assertEquals(200, $response->getStatusCode());
+        $this->assertEquals(204, $response->getStatusCode());
 
         $this->assertJson($content);
         $arrayContent = json_decode($content, true);
